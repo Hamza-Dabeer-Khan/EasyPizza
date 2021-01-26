@@ -2,7 +2,7 @@
 
 ## Technologies
 
-<p> 1 Developing backend Laravel is used.</p>
+<p> 1 Backend is based on Laravel.</p>
 <p> 2 Frontend is based on bootstrap.jquery.html,css</p>
 <p> 3 Datbase postgresql used and procedural functions to maintain data in database</p>
 
