@@ -1,0 +1,44 @@
+<?php
+
+class Connection {
+    
+ public $host = "127.0.0.1";
+ public $port = "5432"; // should be 5432
+ public $databaseName = "test";
+ public $userName = "postgres";
+public $password = "hamza123";
+ public $tableName = "ingredients";
+
+// echo "<html>\r\n";
+// echo "<head><title>PHP PostgreSQL Test</title></head>\r\n";
+// echo "<body>\r\n";
+
+// echo "<h1>PostgreSQL-Verbindungstest</h1>\r\n";
+// echo "Die Verbindung wird zu folgender Datenbank aufgebaut:<br/>\r\n";
+// echo "<ul>\r\n";
+// echo "<li>Host: " . $host . "</li>\r\n";
+// echo "<li>Port: " . $port . "</li>\r\n";
+// echo "<li>Datenbank: " . $databaseName . "</li>\r\n";
+// echo "<li>Benutzername: " . $userName . "</li>\r\n";
+// echo "<li>Relation: " . $tableName . "</li>\r\n";
+// echo "</ul>\r\n";
+
+// echo "<h2>1. Aufbau der Verbindung</h2>\r\n";
+public function dbconnection() {
+try
+{
+  $db_handle = new PDO("pgsql:" . "host=" . $this->host . ";port=" . $this->port. ";dbname=" . $this->databaseName, $this->userName, $this->password);
+}
+catch (PDOException $exception)
+{
+    var_dump($exception);
+  die("Die Verbindung konnte nicht aufgebaut werden:<br/>\r\n" . $exception->getMessage());
+}
+
+echo "Die Verbindung zur Datenbank wurde aufgebaut.<br/>\r\n";
+echo "Inhalt des Datenbank-Handles:<br />\r\n";
+var_dump($db_handle);
+die;
+}
+}
+?>
