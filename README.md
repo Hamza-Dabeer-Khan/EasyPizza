@@ -1,10 +1,13 @@
 <h2>EasyPizze Management system is in development phase</h2>
+
 ## Technologies
+
 <p> 1 Developing backend Laravel is used.</p>
 <p> 2 Frontend is based on bootstrap.jquery.html,css</p>
 <p> 3 Datbase postgresql used and procedural functions to maintain data in database</p>
 
-#Installtion
+## Installtion
+
 <p>Laravel up to 8 version is required</p>
 <p>Postgresql upto 13 version</p>
 
